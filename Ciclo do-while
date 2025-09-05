@@ -1,0 +1,14 @@
+public class CicloDoWhile {
+    
+    public static void main(String[] args) {
+        
+        System.out.println("\n*** Ciclo do-While ***");
+
+        int contador = 1;
+
+        do{
+            System.out.println(contador);
+            contador++;
+        }while(contador<=3);
+    }
+}
