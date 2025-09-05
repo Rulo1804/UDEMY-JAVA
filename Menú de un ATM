@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class ATM {
+    public static void main(String[] args) {
+        
+        Scanner consola = new Scanner(System.in);
+        int opcion = 0;
+        double saldoActual = 1000;
+        
+        while(opcion != 4){
+            
+            System.err.print("""
+                    *** ATM ***
+                    Operaciones que puedes realizar 
+                    1. Consultar Saldo
+                    2. Retirar
+                    3. Depositar 
+                    4. Salir 
+                    Seleccione una opcion: """);
+
+            opcion = Integer.parseInt(consola.nextLine());
+
+            switch(opcion){
+
+                case 1 -> System.out.println("Tu saldo actual es de: " + saldoActual);
+
+                case 2 -> {
+                    System.out.print("Coloca la cantidad que desees retirar: ");
+                    double cantidadRetirar = Double.parseDouble(consola.nextLine());
+
+                    if (cantidadRetirar > saldoActual){
+                        System.out.println("No puedes retirar " + cantidadRetirar + 
+                                           " porque no cuentas con esa cantidad de saldo disponible ");
+                    } else {
+                        saldoActual -= cantidadRetirar; 
+                        System.out.println("Retiraste la cantidad de: " + cantidadRetirar + 
+                                           " tu saldo actual es de: " + saldoActual);
+                    }
+                }
+
+                case 3 -> {
+                    System.out.print("Cantidad a depositar: ");
+                    double cantidadDepositar = Double.parseDouble(consola.nextLine());
+
+                    saldoActual += cantidadDepositar;
+                    System.out.println("Depositaste la cantidad de " + cantidadDepositar);
+                    System.out.println("Tu saldo actual es de: " + saldoActual);
+                }
+
+                case 4 -> System.out.println("Saliendo del cajero... ");
+
+                default -> System.out.println("Opcion invalida ");
+            }
+            System.out.println(""); // Espacio entre iteraciones
+        } 
+        consola.close(); 
+    }
+}
