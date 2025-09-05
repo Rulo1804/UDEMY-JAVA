@@ -1,0 +1,29 @@
+public class SumaAcumulativa {
+    
+    public static void main(String[] args) {
+
+        System.out.println("\n*** Suma Acumulativa con While ***");
+        
+        int i = 1;
+        int suma = 0; //Aqui se gurda lo que vas acumulando 
+
+        while (i<=5){
+            suma +=i; // A la variable SUMA se le va a agregar el valor actual de i
+            System.out.println(suma);
+            i++; //Se hace otra vuelta 
+        }
+        
+    }
+}
+
+// Primera vuelta i empieza en 1, entonces pregunta 1<=5?  si, se hace la operacion 1 + 0 = 1  y ese 1 se gurada en suma, entonces SUMA = 1
+
+// Segunda vuelta i empieza en 2, entoces pregunta 2<=5? si, se hace la operacion 2 + el 1 guardado en suma, entonces = 3 y se guarda en suma. entonces SUMA = 3
+
+// Trecera vuelta i empieza en 3, entonces pregunta 3<=5? si. entonces se hace la operacion 3 + el 3 guardado en suma, entonces 3 = 6, y se guarda en suma, entonces SUMA = 6 
+
+// Cuarta vuelta i empieza en 4, entonces prergunta 4<=5? si, entonces se hace la operacion 4 + el 6 guardado en suma, entonces = 10, y se guarda en suma, entonces SUMA = 10 
+
+// Quinta vuelta i empieza en 5, entonce spregunta 5<=5? si, entonces se hace la operacion 5 + el 10 guardado en suma, entonces = 15, y se guarda en suma, entonces SUMA = 15
+
+// Sexta vuelta i empieza en 6, entonces pregunta 6<=5? no, FIN DEL CICLO 
