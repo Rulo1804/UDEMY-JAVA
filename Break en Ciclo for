@@ -1,0 +1,17 @@
+public class Break {
+    
+    public static void main(String[] args) {
+        
+        System.out.println("\n*** Break en Java *** ");
+        int vueltas = 1;
+
+        for(vueltas =1; vueltas <= 10; vueltas ++){ //Aqui el ciclo NORMALMENTE se terminaria en la vuelta 10
+            if (vueltas == 3){ //En la vuelta tres se acaba el ciclo
+                break;
+            }
+            
+            System.out.println("Vas en la vuelta " + vueltas);
+
+        }
+    }
+}
