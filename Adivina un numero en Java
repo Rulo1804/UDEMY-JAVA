@@ -1,0 +1,40 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Adivinanazas {
+    public static void main(String[] args) {
+         System.out.println("\n*** Juego de Adivinanzas ***");
+
+        Scanner consola = new Scanner(System.in);
+        Random numeroAleatorio = new Random();
+        
+        int intento = 1; //Contador 
+        int acierto = numeroAleatorio.nextInt(20)+1;//El numero entre parentesis es siempre uno menos, y para que sea el de adentro del parentesis se le debe de sumar 1 más 
+        int numeroUsuario;
+
+        for(intento = 1; intento <=10; intento++){
+
+            System.out.println("\nEscoge un numero entre el 0 y el 20 ");
+            System.out.print("Eligue tu numero al azar: ");
+            numeroUsuario = Integer.parseInt(consola.nextLine());
+
+            if(numeroUsuario == acierto){
+                System.out.println("Felicidades, acertaste el número, el número secreto fue: " + acierto);
+                break;
+            }
+
+            else if (numeroUsuario < acierto){
+                System.out.println("Tu numero fue menor que el numero correcto ");
+            }
+
+            else if(numeroUsuario> acierto){
+                System.out.println("Tu numero fue mayor que el numero correcto ");
+            }
+            
+
+        }
+
+        
+
+    }
+}
