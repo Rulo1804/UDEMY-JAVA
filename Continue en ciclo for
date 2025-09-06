@@ -1,0 +1,14 @@
+public class Continue {
+    public static void main(String[] args) {
+        
+        int vuelta = 1;  //contador 
+        
+        for(vuelta =1; vuelta <= 10; vuelta++){
+            if (vuelta == 3){ //Si la vuelta es igual a 3, se salta esa vuelta y CONTINUA el ciclo normalmente PERO sin esa parte 
+                continue;
+            }
+            System.out.println("Vas en la vuelta: " + vuelta);
+        }
+        System.out.println("Fin del ciclo ");
+    }
+}
